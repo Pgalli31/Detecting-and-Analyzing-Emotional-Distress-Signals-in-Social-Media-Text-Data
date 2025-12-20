@@ -66,9 +66,9 @@ Generate topics using Latent Dirichlet Allocation
 
 ---
 
-### 4. `04_topic_modeling.ipynb`
+### 4. `tf-idf.ipynb`
 **Purpose:**  
-Identifies latent themes in mental-health-related text using topic modeling.
+Generate TF-IDF scores and display terms with highest TF-IDF scores along with the post they appear in
 
 **Inputs:**  
 - Lemmatized tokens from preprocessing  

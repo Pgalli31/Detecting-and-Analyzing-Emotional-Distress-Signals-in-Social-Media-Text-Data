@@ -2,11 +2,11 @@
 
 ## Notebook Overview
 Two separate analyses were created using Twitter and Reddit data. The code for both
-data are 
+datasets are 
 
 ### 1. `twitter_cleaning.ipynb` / `reddit_cleaning.ipynb`
 **Purpose:**  
-Cleans and prepares raw Twitter and Reddit text data for analysis and machine learning.
+Cleans and prepares raw Twitter and Reddit text data for analysis and machine learning
 
 **Inputs:**  
 - `twitter_data.csv`
@@ -31,9 +31,9 @@ Generates polarity score and classifies each post as positive, neutral, or negat
 - Cleaned text (`clean_post`) from preprocessing notebook
 
 **What it does:**  
-- Applies polarity score to each clean post 
+- Applies polarity score to each clean post using VADER Python package
 - Classifies each post as positive, neutral, and negative 
-- Splits classifications into non-negative affect or high negative affect based on threshold -0.05. 
+- Splits classifications into non-negative affect or high negative affect
 - Creates and adds new columns `polarity`, `sentiment`, `affect_label`, and `label_name` to datasets  
 
 **Outputs:**  
@@ -43,21 +43,26 @@ Generates polarity score and classifies each post as positive, neutral, or negat
 
 ---
 
-### 3. `03_sentiment_analysis.ipynb`
+### 3. `LDA.ipynb`
 **Purpose:**  
-Quantifies emotional polarity in posts to complement lexical features.
+Generate topics using Latent Dirichlet Allocation
 
 **Inputs:**  
 - Cleaned text (`clean_post`)
 
 **What it does:**  
-- Applies sentiment analysis (e.g., VADER / TextBlob)  
-- Computes polarity and subjectivity scores  
-- Analyzes sentiment distributions across posts  
+- Lemmatization for each text
+- Creates 10, 20, and 30 topics
+- Visualizes topics using PyLDavis  
 
 **Outputs:**  
-- Sentiment score columns added to the dataset  
-- Visualizations summarizing sentiment trends  
+- Visualizations of 10, 20, and 30 topics using PyLDavis
+- `10_twitter_lda_visualization.html`
+- `10_reddit_lda_visualization.html`
+- `20_twitter_lda_visualization.html`
+- `20_reddit_lda_visualization.html`
+- `30_twitter_lda_visualization.html`
+- `30_reddit_lda_visualization.html`
 
 ---
 

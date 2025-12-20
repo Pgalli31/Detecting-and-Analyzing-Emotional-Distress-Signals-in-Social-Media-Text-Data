@@ -1,8 +1,10 @@
 # Detecting-and-Analyzing-Emotional-Distress-Signals-in-Social-Media-Text-Data
 
 ## Notebook Overview
+Two separate analyses were created using Twitter and Reddit data. The code for both
+data are 
 
-### 1. `twitter_cleaning.ipynb` / 'reddit_cleaning.ipynb'
+### 1. `twitter_cleaning.ipynb` / `reddit_cleaning.ipynb`
 **Purpose:**  
 Cleans and prepares raw Twitter and Reddit text data for analysis and machine learning.
 
@@ -21,7 +23,7 @@ Cleans and prepares raw Twitter and Reddit text data for analysis and machine le
 - `reddit_clean_data.csv`
 ---
 
-### 2. `02_tfidf_analysis.ipynb`
+### 2. `sentiment_analysis.ipynb`
 **Purpose:**  
 Transforms cleaned text into numerical features using TF-IDF and identifies the most distinctive words and phrases.
 

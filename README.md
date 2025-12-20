@@ -25,20 +25,21 @@ Cleans and prepares raw Twitter and Reddit text data for analysis and machine le
 
 ### 2. `sentiment_analysis.ipynb`
 **Purpose:**  
-Transforms cleaned text into numerical features using TF-IDF and identifies the most distinctive words and phrases.
+Generates polarity score and classifies each post as positive, neutral, or negative based on threshold
 
 **Inputs:**  
 - Cleaned text (`clean_post`) from preprocessing notebook
 
 **What it does:**  
-- Builds a TF-IDF matrix using unigrams and bigrams  
-- Removes extremely common and extremely rare terms  
-- Identifies top TF-IDF term–document pairs  
-- Displays full cleaned posts alongside high TF-IDF terms for interpretability  
+- Applies polarity score to each clean post 
+- Classifies each post as positive, neutral, and negative 
+- Splits classifications into non-negative affect or high negative affect based on threshold -0.05. 
+- Creates and adds new columns `polarity`, `sentiment`, `affect_label`, and `label_name` to datasets  
 
 **Outputs:**  
-- TF-IDF feature matrix  
-- Tables of top TF-IDF terms with contextualized text examples  
+- Full datasets with added features
+- `twitter_data_full.csv`
+- `reddit_data_full.csv` 
 
 ---
 

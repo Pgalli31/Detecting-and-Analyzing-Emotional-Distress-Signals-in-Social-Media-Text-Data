@@ -4,6 +4,8 @@
 Two separate analyses were created using Twitter and Reddit data. The code for both
 datasets are 
 
+*The analyses for both datasets are separated. There are two folders named `twitter` and `reddit`*
+
 ### 1. `twitter_cleaning.ipynb` / `reddit_cleaning.ipynb`
 **Purpose:**  
 Cleans and prepares raw Twitter and Reddit text data for analysis and machine learning
@@ -71,39 +73,34 @@ Generate topics using Latent Dirichlet Allocation
 Generate TF-IDF scores and display terms with highest TF-IDF scores along with the post they appear in
 
 **Inputs:**  
-- Lemmatized tokens from preprocessing  
+- Cleaned text (`clean_post`)
 
-**What it does:**  
+**What it does:** 
+- Filters out posts containing less than 5 terms
 - Constructs document–term matrices  
-- Fits an LDA topic model  
-- Extracts and interprets dominant topics  
-- Assigns topic probabilities to documents  
+- Constructs dataframe consisting of post index, term, and TF-IDF score
+- Filters dataframe to TF-IDF scores less than 0.990
 
 **Outputs:**  
-- Topic–word distributions  
-- Document-level topic probabilities  
-- Topic interpretation tables  
+- Returns top 5 terms with highest TF-IDF score along with post index and post text  
 
 ---
 
-### 5. `05_logistic_regression.ipynb`
+### 5. `log_regression_1.ipynb` / `log_regression_2.ipynb`
 **Purpose:**  
-Builds and evaluates a classification model to identify mental-health-related posts.
+Builds and evaluates a logistic regression model to determine the top indicators of high negative affect and non-negative affec.
 
 **Inputs:**  
-- TF-IDF features  
-- Sentiment scores  
-- Topic probabilities  
-- Target labels (if applicable)
+- TF-IDF terms as X variable
+- Affect label 0 or 1 as Y variable 
 
-**What it does:**  
-- Combines linguistic and semantic features  
+**What it does:**   
 - Trains a logistic regression classifier  
 - Evaluates performance using accuracy, ROC-AUC, and confusion matrices  
-- Interprets model coefficients to identify predictive terms  
+- Interprets model coefficients to identify top indicators  
 
 **Outputs:**  
 - Trained classification model  
-- Evaluation metrics and figures  
-- Interpretable feature importance results  
+- Evaluation metrics  
+- Interpretable indicator results  
 

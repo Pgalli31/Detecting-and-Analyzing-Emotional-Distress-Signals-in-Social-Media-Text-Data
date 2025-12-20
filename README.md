@@ -7,19 +7,18 @@
 Cleans and prepares raw Twitter and Reddit text data for analysis and machine learning.
 
 **Inputs:**  
-- 'twitter_data.csv'
-- `reddit_data.csv`
+- `twitter_data.csv`
+- `reddit.csv`
 
 **What it does:**  
 - Removes URLs, mentions, emojis, and special characters  
-- Converts text to lowercase  
-- Filters out empty and very short posts  
-- Applies lemmatization using spaCy (nouns and adjectives only)  
+- Converts text to lowercase and removes stop words 
 - Creates the `clean_post` column used throughout the project  
 
 **Outputs:**  
-- Cleaned DataFrame with validated text ready for TF-IDF, sentiment analysis, and topic modeling
-
+- Cleaned csv files ready for analyses and ML models
+- `twitter_clean_data.csv`
+- `reddit_clean_data.csv`
 ---
 
 ### 2. `02_tfidf_analysis.ipynb`

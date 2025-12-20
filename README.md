@@ -55,6 +55,7 @@ Generate topics using Latent Dirichlet Allocation
 **What it does:**  
 - Lemmatization for each text
 - Creates 10, 20, and 30 topics
+- Evaluates performance using coherence and perplexity scores
 - Visualizes topics using PyLDavis  
 
 **Outputs:**  
